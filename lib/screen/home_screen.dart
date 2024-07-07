@@ -11,13 +11,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          //addbar คือข้างบน
-          title: Center(child: Text('Home')),
-        ),
-        body: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
+      appBar: AppBar(
+        //addbar คือข้างบน
+        title: Center(child: Text('Home')),
+      ),
+      body: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Container(
               width: 170,
@@ -89,14 +89,20 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             Expanded(
-              child: Image.asset(
-                'Images/a.jpg',
-                width: 20,
-                height: 200,
-                fit: BoxFit.cover,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  SizedBox(width: 10),
+                  Image.asset(
+                    'Images/a.jpg',
+                    width: 1000,
+                    height: 1000,
+                    fit: BoxFit.cover,
+                  ),
+                ],
               ),
             ),
-          ],
-        ));
+          ]),
+    );
   }
 }
